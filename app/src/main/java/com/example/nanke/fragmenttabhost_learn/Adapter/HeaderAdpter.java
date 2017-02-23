@@ -20,8 +20,6 @@ import java.util.List;
 public class HeaderAdpter extends RecyclerView.Adapter<HeaderAdpter.ViewHolder> {
 
     private List<Meizi> mList;
-
-
     public HeaderAdpter(List<Meizi> meizi){
         this.mList=meizi;
     }

@@ -19,7 +19,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="15sp"
-        android:textColor="#9b0808"
+        android:textColor="#f5f4f4"
         >
     </TextView>
 
