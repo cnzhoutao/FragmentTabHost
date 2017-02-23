@@ -57,7 +57,7 @@ public class fragment4 extends Fragment {
         OkHttpClient okHttpClient=new OkHttpClient();
 
         final Request request=new Request.Builder()
-                .url("http://gank.io/api/data/Android/30/0")
+                .url("http://gank.io/api/data/Android/150/1")
                 .build();
 
         Call call=okHttpClient.newCall(request);
@@ -75,7 +75,7 @@ public class fragment4 extends Fragment {
 
                     String str=response.body().string();
 
-                    System.out.println("***********"+str);
+                 //   System.out.println("***********"+str);
 
                     Gson gson=new Gson();//数据解析
 
