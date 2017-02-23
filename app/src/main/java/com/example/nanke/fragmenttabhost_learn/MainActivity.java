@@ -25,19 +25,19 @@ public class MainActivity extends FragmentActivity {
 
     private Class mFragment[] = {
             fragment1.class,
+            fragment4.class,
             fragment2.class,
             fragment3.class,
-            fragment4.class,
             fragment5.class
     };
     private String[] title = {
             "首页",
+            "搜索",
             "消息",
             "好友",
-            "搜索",
             "更多"
     };
-    private FragmentTabHost mTabHost;
+    private com.example.nanke.fragmenttabhost_learn.FragmentTabHost mTabHost;
     private LayoutInflater mLayoutInflater;
 
     @Override
@@ -50,7 +50,8 @@ public class MainActivity extends FragmentActivity {
     public void initView() {
         mLayoutInflater = LayoutInflater.from(this);
 
-        mTabHost = (FragmentTabHost) findViewById(android.R.id.tabhost);
+        mTabHost = (com.example.nanke.fragmenttabhost_learn.FragmentTabHost)
+                findViewById(android.R.id.tabhost);
 
         mTabHost.setup(this, getSupportFragmentManager(), R.id.fram);
 
@@ -58,6 +59,7 @@ public class MainActivity extends FragmentActivity {
         for (int i = 0; i < count; i++) {
             TabHost.TabSpec tabSpec = mTabHost.newTabSpec(title[i])
                     .setIndicator(getTabItemVIew(i));
+
             mTabHost.addTab(tabSpec, mFragment[i], null);
             mTabHost.getTabWidget().getChildAt(i)
                     .setBackgroundResource(R.drawable.selector_tab_background);
