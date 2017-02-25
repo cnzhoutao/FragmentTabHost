@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ import java.util.List;
 public class fragment1 extends Fragment {
 
     List<Meizi> list=new ArrayList<>();
+    private Toolbar toolbar;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,6 +37,8 @@ public class fragment1 extends Fragment {
        // LinearLayoutManager layoutManager=new LinearLayoutManager(container.getContext());
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adpter);
+        toolbar= (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar.setTitle("轻松一刻");
         return view;
     }
 

@@ -6,8 +6,10 @@ import android.os.Handler;
 import android.os.Message;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,6 +34,8 @@ import okhttp3.Response;
 
 public class fragment4 extends Fragment {
     private RecyclerView recyclerView;
+
+    private Toolbar toolbar;
     private Context context;
     private Handler handler=new Handler(){
         @Override
@@ -47,11 +51,17 @@ public class fragment4 extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view=inflater.inflate(R.layout.fragment4,null);
+
+
         recyclerView= (RecyclerView) view.findViewById(R.id.recycler_view4);
+
+        toolbar= (Toolbar) view.findViewById(R.id.toolbar);
+        toolbar.setTitle("干货集中营");
         this.context=container.getContext();
         getJson();
         return view;
     }
+
     public void getJson(){
 
         OkHttpClient okHttpClient=new OkHttpClient();

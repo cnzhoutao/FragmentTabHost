@@ -19,23 +19,16 @@ import com.example.nanke.fragmenttabhost_learn.Fragment.fragment5;
 public class MainActivity extends FragmentActivity {
     private int[] image = {R.drawable.tab_square,
             R.drawable.tab_measssge,
-            R.drawable.tab_home,
-            R.drawable.tab_selfinfo,
             R.drawable.tab_more};
-
     private Class mFragment[] = {
             fragment1.class,
             fragment4.class,
-            fragment2.class,
-            fragment3.class,
             fragment5.class
     };
     private String[] title = {
-            "首页",
-            "搜索",
-            "消息",
-            "好友",
-            "更多"
+            "寻找快乐",
+            "广场",
+            "个人中心"
     };
     private com.example.nanke.fragmenttabhost_learn.FragmentTabHost mTabHost;
     private LayoutInflater mLayoutInflater;
